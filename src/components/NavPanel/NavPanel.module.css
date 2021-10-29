@@ -1,0 +1,16 @@
+.navList {
+  list-style-type: none;
+  display: flex;
+}
+
+.navItem:not(:last-child) {
+  margin-right: 25px;
+}
+
+.link {
+  color: var(--basicGray);
+}
+
+.link:hover {
+  opacity: 0.7;
+}
