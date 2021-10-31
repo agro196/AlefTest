@@ -1,5 +1,7 @@
 # Тестовое задание Alef
 Тестовое задание на позицию React-программист
+Выполнено с использованием TypeScript и 
+Redux Toolkit
 ## Запуск и сборка
 Проект собран с использованием [create-react-app](https://create-react-app.dev/)
 
