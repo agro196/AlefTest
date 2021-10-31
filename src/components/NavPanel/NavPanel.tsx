@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "clsx";
+import { Link } from "react-router-dom";
 import styles from "./NavPanel.module.css";
 
 export type NavPanelProps = React.HTMLAttributes<HTMLDivElement>;
@@ -9,14 +10,14 @@ export function NavPanel({ className, ...props }: NavPanelProps) {
     <nav className={cx(className, styles.container)} {...props}>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <a className={styles.link} href="/">
+          <Link to="/" className={styles.link}>
             Форма
-          </a>
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <a className={styles.link} href="/">
+          <Link to="/preview" className={styles.link}>
             Превью
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

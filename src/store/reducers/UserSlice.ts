@@ -1,22 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IUser } from "../../models/IUser";
 
-interface UserState {
-  users: IUser[];
-  isLoading: boolean;
-  error: string;
-}
+interface UserState extends IUser {}
 
 const initialState: UserState = {
-  users: [],
-  isLoading: false,
-  error: "",
+  name: "",
+  age: "",
 };
 
 export const UserSlice = createSlice({
   name: "user",
   initialState,
-  reducers: {},
+  reducers: {
+    editUser(state, action: PayloadAction<{ user: IUser }>) {
+      state.age = action.payload.user.age;
+      state.name = action.payload.user.name;
+    },
+  },
 });
+
+export const { editUser } = UserSlice.actions;
 
 export default UserSlice.reducer;

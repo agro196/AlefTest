@@ -1,6 +1,5 @@
 export interface IUserData {
-  name: string;
-  age: string;
+  user: IUser;
   children: IUser[];
 }
 
